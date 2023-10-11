@@ -234,6 +234,8 @@ function Animate() {
     })
 }
 
+var m = new Boolean(false);
+
 window.addEventListener('click', (event) => 
 {
     const angle = Math.atan2(
@@ -246,6 +248,22 @@ window.addEventListener('click', (event) =>
     }
     projectiles.push(new Projectile(CANVAS_MIDDLE_WIDTH, CANVAS_MIDDLE_HEIGHT, 5, 'white', velocity)
     )
+})
+
+window.addEventListener('mousedown', (event) => 
+{
+    m = true
+    // while(m)
+    // {
+    //     setInterval(() => {
+    //         setTimeout(() => {console.log("fire")}, 2000)
+    //     }, 1000);
+    // }
+})
+
+window.addEventListener('mouseup', (event) => 
+{
+    m = false
 })
 
 Animate()
